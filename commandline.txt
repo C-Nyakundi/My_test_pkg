@@ -1,0 +1,158 @@
+
+(base) C:\Users\ELITEBOOK>color 0a
+
+(base) C:\Users\ELITEBOOK>cd "C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage"
+
+(base) C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage>python setup.py sdist
+python: can't open file 'C:\\Users\\ELITEBOOK\\Data_Science_Python\\Week 22\\mypackage\\setup.py': [Errno 2] No such file or directory
+
+(base) C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage> cd "C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage"
+
+(base) C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage>python setup.py sdist
+Traceback (most recent call last):
+  File "C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage\setup.py", line 9, in <module>
+    long_description= open('README.md').read(),
+                      ^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'README.md'
+
+(base) C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage> python setup.py sdist
+Traceback (most recent call last):
+  File "C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage\setup.py", line 9, in <module>
+    long_description= open('readme.md').read(),
+                      ^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+
+(base) C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage> python setup.py sdist
+Traceback (most recent call last):
+  File "C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage\setup.py", line 9, in <module>
+    long_description= open('readme.md').read(),
+                      ^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+
+(base) C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage> python setup.py sdist
+running sdist
+running egg_info
+creating mypackage.egg-info
+writing mypackage.egg-info\PKG-INFO
+writing dependency_links to mypackage.egg-info\dependency_links.txt
+writing requirements to mypackage.egg-info\requires.txt
+writing top-level names to mypackage.egg-info\top_level.txt
+writing manifest file 'mypackage.egg-info\SOURCES.txt'
+reading manifest file 'mypackage.egg-info\SOURCES.txt'
+writing manifest file 'mypackage.egg-info\SOURCES.txt'
+running check
+creating mypackage-0.1
+creating mypackage-0.1\mypackage.egg-info
+creating mypackage-0.1\tests
+copying files to mypackage-0.1...
+copying setup.py -> mypackage-0.1
+copying mypackage.egg-info\PKG-INFO -> mypackage-0.1\mypackage.egg-info
+copying mypackage.egg-info\SOURCES.txt -> mypackage-0.1\mypackage.egg-info
+copying mypackage.egg-info\dependency_links.txt -> mypackage-0.1\mypackage.egg-info
+copying mypackage.egg-info\requires.txt -> mypackage-0.1\mypackage.egg-info
+copying mypackage.egg-info\top_level.txt -> mypackage-0.1\mypackage.egg-info
+copying tests\test.py -> mypackage-0.1\tests
+Writing mypackage-0.1\setup.cfg
+creating dist
+Creating tar archive
+removing 'mypackage-0.1' (and everything under it)
+
+(base) C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage>git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+(base) C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage>git add .
+fatal: not a git repository (or any of the parent directories): .git
+
+(base) C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage>git init
+Initialized empty Git repository in C:/Users/ELITEBOOK/Data_Science_Python/Week 22/mypackage/mypackage/.git/
+
+(base) C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage>git add .
+warning: in the working copy of 'mypackage.egg-info/SOURCES.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'mypackage.egg-info/dependency_links.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'mypackage.egg-info/requires.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'mypackage.egg-info/top_level.txt', LF will be replaced by CRLF the next time Git touches it
+
+(base) C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage> git commit -m "First commit"
+[master (root-commit) edfcb90] First commit
+ 11 files changed, 79 insertions(+)
+ create mode 100644 __init__.py
+ create mode 100644 dist/mypackage-0.1.tar.gz
+ create mode 100644 myModule.py
+ create mode 100644 mypackage.egg-info/PKG-INFO
+ create mode 100644 mypackage.egg-info/SOURCES.txt
+ create mode 100644 mypackage.egg-info/dependency_links.txt
+ create mode 100644 mypackage.egg-info/requires.txt
+ create mode 100644 mypackage.egg-info/top_level.txt
+ create mode 100644 readme.md
+ create mode 100644 setup.py
+ create mode 100644 tests/test.py
+
+(base) C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage>git remote add origin https://github.com/C-Nyakundi/My_test_pkg.git
+
+(base) C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage>git push orign master
+fatal: 'orign' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+(base) C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage>git push origin master
+info: please complete authentication in your browser...
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (15/15), 3.10 KiB | 1.55 MiB/s, done.
+Total 15 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/C-Nyakundi/My_test_pkg.git
+ * [new branch]      master -> master
+
+(base) C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage>pip install git+https://github.com/C-Nyakundi/My_test_pkg.git
+Collecting git+https://github.com/C-Nyakundi/My_test_pkg.git
+  Cloning https://github.com/C-Nyakundi/My_test_pkg.git to c:\users\elitebook\appdata\local\temp\pip-req-build-a62n846h
+  Running command git clone --filter=blob:none --quiet https://github.com/C-Nyakundi/My_test_pkg.git 'C:\Users\ELITEBOOK\AppData\Local\Temp\pip-req-build-a62n846h'
+  Resolved https://github.com/C-Nyakundi/My_test_pkg.git to commit edfcb909920c2d83e435c77ef9bdd280e4b0caec
+  ERROR: Error [WinError 225] Operation did not complete successfully because the file contains a virus or potentially unwanted software while executing command python setup.py egg_info
+  Preparing metadata (setup.py) ... error
+ERROR: Could not install packages due to an OSError: [WinError 225] Operation did not complete successfully because the file contains a virus or potentially unwanted software
+
+
+(base) C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage>pip install git+https://github.com/C-Nyakundi/My_test_pkg.git
+Collecting git+https://github.com/C-Nyakundi/My_test_pkg.git
+  Cloning https://github.com/C-Nyakundi/My_test_pkg.git to c:\users\elitebook\appdata\local\temp\pip-req-build-xi6yk0jj
+  Running command git clone --filter=blob:none --quiet https://github.com/C-Nyakundi/My_test_pkg.git 'C:\Users\ELITEBOOK\AppData\Local\Temp\pip-req-build-xi6yk0jj'
+  Resolved https://github.com/C-Nyakundi/My_test_pkg.git to commit edfcb909920c2d83e435c77ef9bdd280e4b0caec
+  ERROR: Error [WinError 225] Operation did not complete successfully because the file contains a virus or potentially unwanted software while executing command python setup.py egg_info
+  Preparing metadata (setup.py) ... error
+ERROR: Could not install packages due to an OSError: [WinError 225] Operation did not complete successfully because the file contains a virus or potentially unwanted software
+
+
+(base) C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage>pip install git+https://github.com/C-Nyakundi/My_test_pkg.git
+Collecting git+https://github.com/C-Nyakundi/My_test_pkg.git
+  Cloning https://github.com/C-Nyakundi/My_test_pkg.git to c:\users\elitebook\appdata\local\temp\pip-req-build-b6lkqvwu
+  Running command git clone --filter=blob:none --quiet https://github.com/C-Nyakundi/My_test_pkg.git 'C:\Users\ELITEBOOK\AppData\Local\Temp\pip-req-build-b6lkqvwu'
+  Resolved https://github.com/C-Nyakundi/My_test_pkg.git to commit edfcb909920c2d83e435c77ef9bdd280e4b0caec
+  ERROR: Error [WinError 225] Operation did not complete successfully because the file contains a virus or potentially unwanted software while executing command python setup.py egg_info
+  Preparing metadata (setup.py) ... error
+ERROR: Could not install packages due to an OSError: [WinError 225] Operation did not complete successfully because the file contains a virus or potentially unwanted software
+
+
+(base) C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage>pip install git+https://github.com/C-Nyakundi/My_test_pkg.git
+Collecting git+https://github.com/C-Nyakundi/My_test_pkg.git
+  Cloning https://github.com/C-Nyakundi/My_test_pkg.git to c:\users\elitebook\appdata\local\temp\pip-req-build-wmpibele
+  Running command git clone --filter=blob:none --quiet https://github.com/C-Nyakundi/My_test_pkg.git 'C:\Users\ELITEBOOK\AppData\Local\Temp\pip-req-build-wmpibele'
+  Resolved https://github.com/C-Nyakundi/My_test_pkg.git to commit edfcb909920c2d83e435c77ef9bdd280e4b0caec
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: numpy in c:\users\elitebook\anaconda3\lib\site-packages (from mypackage==0.1) (1.24.3)
+Building wheels for collected packages: mypackage
+  Building wheel for mypackage (setup.py) ... done
+  Created wheel for mypackage: filename=mypackage-0.1-py3-none-any.whl size=1114 sha256=cd5a5245e15741f1bf7cec309de230fa35dfc6c71fb0476e4556486dbe1d3ee8
+  Stored in directory: C:\Users\ELITEBOOK\AppData\Local\Temp\pip-ephem-wheel-cache-z6s_ekcv\wheels\cd\2e\36\9d48c47b4e9e17f3d6cf6fad8826def466020a22e449caea48
+Successfully built mypackage
+Installing collected packages: mypackage
+Successfully installed mypackage-0.1
+
+(base) C:\Users\ELITEBOOK\Data_Science_Python\Week 22\mypackage\mypackage>
